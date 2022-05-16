@@ -1,0 +1,7 @@
+@import "main.css";
+
+@media only screen and (max-width: 600px) {
+    .icon-content {
+        flex-direction: column;
+    }
+}

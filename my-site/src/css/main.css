@@ -71,7 +71,6 @@ a:hover:not(.button){
 .section1::before {
     content: ' ';
     position: absolute;
-    min-height: 100vh;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -172,7 +171,7 @@ h1 {
 .section3::before {
     content: ' ';
     position: absolute;
-    min-height: 50vh;
+    height: 100%;
     width: 100%;
     z-index: -1;
     filter:brightness(.5);
@@ -198,4 +197,12 @@ footer {
     padding: 15px 0px;
     color: #bdbdbd;
     text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .icon-content {
+        flex-direction: column;
+    }
+    .section2 img {
+        display: none;
+    }
 }
