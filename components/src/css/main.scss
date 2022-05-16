@@ -63,3 +63,9 @@ a {
     }
 }
 
+.block {
+    flex-direction: column;
+    & .showcase {
+        margin: 10px 0;
+    }
+}

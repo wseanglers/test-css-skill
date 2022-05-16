@@ -177,6 +177,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .s-form-input .s-input-placeholder {
   transition: all 0.5s;
@@ -187,6 +188,7 @@
 }
 
 .s-input {
+  width: 100%;
   border-radius: 7px;
   padding: 12px 14px;
   transition: all 0.5s;
@@ -215,6 +217,37 @@
   font-size: 14px;
   transform: translateY(-14px);
   color: #00bcd4;
+}
+
+.s-input-outlined {
+  width: 100%;
+  padding: 14px 2px 4px 2px;
+  transition: all 0.5s;
+  font-size: 16px;
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 2px solid #747373;
+}
+.s-input-outlined::placeholder {
+  transition: all 0.5s;
+  font-size: 16px;
+}
+.s-input-outlined:focus {
+  outline: none;
+  border-bottom-color: #00bcd4;
+}
+.s-input-outlined:focus ~ .s-input-placeholder {
+  font-size: 14px;
+  transform: translateY(-14px);
+  color: #00bcd4;
+}
+.s-input-outlined:valid ~ .s-input-placeholder {
+  font-size: 14px;
+  transform: translateY(-14px);
+  color: #00bcd4;
+}
+.s-input-outlined ~ .s-input-placeholder {
+  padding-left: 0;
 }
 
 body {
@@ -278,6 +311,13 @@ a {
 }
 .showcase > span {
   margin-top: 12px;
+}
+
+.block {
+  flex-direction: column;
+}
+.block .showcase {
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
