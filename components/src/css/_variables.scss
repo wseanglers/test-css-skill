@@ -1,4 +1,8 @@
+$defaultTransitionTime: all 0.5s;
 $transitionTime: 0.5s;
+
+$translateYHover: translateY(-6px);
+$translateYActive: tranlateY(0px);
 
 //colors
 $dangerColor: #ff5252;
@@ -15,4 +19,5 @@ $successHoverColor: #3d9b46;
 
 $warningColor: #ff9800;
 $warningHoverColor: #f57c00;
+
 

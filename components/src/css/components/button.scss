@@ -1,0 +1,144 @@
+.btn-d {
+    padding: 1rem;
+    transition: all $transitionTime;
+    border:none;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+        &:hover {
+            transform: none;
+        }
+    }
+    &:hover {
+        transform: $translateYHover;
+        background: rgb(226, 223, 223);
+    }
+    &--primary {
+        background-color: $primaryColor;
+        color: #fff;
+        &:hover {
+            background-color: $primaryHoverColor;
+        }
+    }
+    &--warning {
+        background-color: $warningColor;
+        color: #fff;
+        &:hover {
+            background-color: $warningHoverColor;
+        }
+    }
+
+    &--danger {
+        background-color: $dangerColor;
+        color: #fff;
+        &:hover {
+            background-color: $dangerHoverColor;
+        }
+    }
+
+    &--success {
+        background-color: $successColor;
+        color: #fff;
+        &:hover {
+            background-color: $successHoverColor;
+        }
+    }
+    &:active {
+        transform: $translateYActive;
+    }
+}
+
+.btn-o {
+    padding: 1rem;
+    transition: all $transitionTime;
+    border:none;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    color:black !important;
+    cursor: pointer;
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+        &:hover {
+            transform: none;
+        }
+    }
+    &--glow {
+        border-color: #1b1b1b;
+        box-shadow: 0 0 10px #020202;
+    }
+    &:hover {
+        transform: $translateYHover;
+        background: rgb(12, 12, 12);
+        color: white !important;
+    }
+    &--primary {
+        border: 1px solid $primaryColor;
+        color: $primaryColor !important;
+        &:hover {
+            background-color: $primaryHoverColor;
+        }
+        &--glow {
+            color: $primaryColor !important;
+            border-color: $primaryColor;
+            box-shadow: 0 0 10px $primaryColor;
+            &:hover {
+                background-color: $primaryHoverColor;
+            }
+        }
+    }
+    &--warning {
+        border: 1px solid $warningColor;
+        color: $warningColor !important;
+        &:hover {
+            background-color: $warningHoverColor;
+        }
+        &--glow {
+            color: $warningColor !important;
+            border-color: $warningColor;
+            box-shadow: 0 0 10px $warningColor;
+            &:hover {
+                background-color: $warningHoverColor;
+            }
+        }
+    }
+
+    &--danger {
+        border: 1px solid $dangerColor;
+        color: $dangerColor !important;
+        &:hover {
+            background-color: $dangerHoverColor;
+        }
+        &--glow {
+            color: $dangerColor !important;
+            border-color: $dangerColor;
+            box-shadow: 0 0 10px $dangerColor;
+            &:hover {
+                background-color: $dangerHoverColor;
+            }
+        }
+    }
+
+    &--success {
+        border: 1px solid $successColor;
+        color: $successColor !important;
+        &:hover {
+            background-color: $successHoverColor;
+        }
+        &--glow {
+            color: $successColor !important;
+            border-color: $successColor;
+            box-shadow: 0 0 10px $successColor;
+            &:hover {
+                background-color: $successHoverColor;
+            }
+        }
+    }
+    &:active {
+        transform: $translateYActive;
+    }
+}

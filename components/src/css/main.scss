@@ -1,5 +1,10 @@
 @import './_variables';
+@import './_mixins';
+@import './_responsive';
 
+//Components
+@import './components/button.scss';
+@import './components/input.scss';
 
 body {
     margin: 0;
@@ -29,7 +34,10 @@ a {
     }
 }
 .items {
-    margin: auto 4rem;   
+    margin: auto 4rem;
+    .example:not(:first-child) {
+        border-radius: 0;
+    }
 }
 .code-example {
     border: 1px solid #e5e5e5;
@@ -54,97 +62,4 @@ a {
         margin-top: 12px;
     }
 }
-.btn-d {
-    padding: 1rem;
-    transition: all $transitionTime;
-    border:none;
-    border-radius: 12px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    &:hover {
-        transform: translateY(-6px);
-        background: rgb(226, 223, 223);
-    }
-    &--primary {
-        background-color: $primaryColor;
-        color: #fff;
-        &:hover {
-            background-color: $primaryHoverColor;
-        }
-    }
-    &--warning {
-        background-color: $warningColor;
-        color: #fff;
-        &:hover {
-            background-color: $warningHoverColor;
-        }
-    }
 
-    &--danger {
-        background-color: $dangerColor;
-        color: #fff;
-        &:hover {
-            background-color: $dangerHoverColor;
-        }
-    }
-
-    &--success {
-        background-color: $successColor;
-        color: #fff;
-        &:hover {
-            background-color: $successHoverColor;
-        }
-    }
-    &:active {
-        transform: translateY(3px);
-    }
-}
-
-.btn-o {
-    padding: 1rem;
-    transition: all $transitionTime;
-    border:none;
-    border-radius: 12px;
-    letter-spacing: 1px;
-    border: 1px solid black;
-    color:black !important;
-    cursor: pointer;
-    &:hover {
-        transform: translateY(-6px);
-        background: rgb(12, 12, 12);
-        color: white !important;
-    }
-    &--primary {
-        border: 1px solid $primaryColor;
-        color: $primaryColor !important;
-        &:hover {
-            background-color: $primaryHoverColor;
-        }
-    }
-    &--warning {
-        border: 1px solid $warningColor;
-        color: $warningColor !important;
-        &:hover {
-            background-color: $warningHoverColor;
-        }
-    }
-
-    &--danger {
-        border: 1px solid $dangerColor;
-        color: $dangerColor !important;
-        &:hover {
-            background-color: $dangerHoverColor;
-        }
-    }
-
-    &--success {
-        border: 1px solid $successColor;
-        color: $successColor !important;
-        &:hover {
-            background-color: $successHoverColor;
-        }
-    }
-    &:active {
-        transform: translateY(3px);
-    }
-}

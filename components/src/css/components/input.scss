@@ -1,0 +1,46 @@
+.s-form-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    .s-input-placeholder {
+        transition: $defaultTransitionTime;
+        position: absolute;
+        padding-left: 14px;
+        user-select: none;
+        pointer-events: none;
+    }
+}
+.s-input {
+    border-radius: 7px;
+    padding: 12px 14px;
+    transition: $defaultTransitionTime;
+    font-size: 16px;
+    &:enabled {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #e5e5e5;
+    }
+    &::placeholder {
+        transition: $defaultTransitionTime;
+        font-size: 16px;
+    }
+    &:focus {
+        outline: none;
+        border: 1px solid $primaryColor;
+        box-shadow: 0 0 5px $primaryColor;
+        & ~ .s-input-placeholder {
+            font-size: 14px;
+            transform: translateY(-14px);
+            color: $primaryColor;
+        }
+        
+        
+    }
+    &:valid {
+        & ~ .s-input-placeholder {
+            font-size: 14px;
+            transform: translateY(-14px);
+            color: $primaryColor;
+        }
+    }
+}

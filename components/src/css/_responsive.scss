@@ -1,0 +1,43 @@
+
+// Portrait phones (portrait-first)
+@media (min-width: 320px) and (max-width: 767px) {
+    .example {
+        flex-direction: column;
+    }
+    .code-example {
+        border: 1px solid #e5e5e5;
+        border-radius: 0 0 12px 12px;
+        & > h4 {
+            margin-left: 20px;
+        }
+    }
+    .showcase {
+        & > span {
+            margin: 5px 0px !important
+        }
+    }
+}
+// Landscape phones (landscape-first)
+@media (min-width: 768px) and (max-width: 1024px) {
+    .example {
+        flex-direction: column;
+    }
+    .code-example {
+        border: 1px solid #e5e5e5;
+        border-radius: 0 0 12px 12px;
+        & > h4 {
+            margin-left: 20px;
+        }
+    }
+    .showcase {
+        & > span {
+            margin: 5px 0px !important
+        }
+    }
+}
+// Tablets (landscape-first)
+@media (min-width: 1025px) and (max-width: 1279px) {
+}
+// Desktops (landscape-first)
+@media (min-width: 1280px) and (max-width: 1919px) {
+}
