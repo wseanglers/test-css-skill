@@ -99,3 +99,52 @@ a {
         transform: translateY(3px);
     }
 }
+
+.btn-o {
+    padding: 1rem;
+    transition: all $transitionTime;
+    border:none;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    color:black !important;
+    cursor: pointer;
+    &:hover {
+        transform: translateY(-6px);
+        background: rgb(12, 12, 12);
+        color: white !important;
+    }
+    &--primary {
+        border: 1px solid $primaryColor;
+        color: $primaryColor !important;
+        &:hover {
+            background-color: $primaryHoverColor;
+        }
+    }
+    &--warning {
+        border: 1px solid $warningColor;
+        color: $warningColor !important;
+        &:hover {
+            background-color: $warningHoverColor;
+        }
+    }
+
+    &--danger {
+        border: 1px solid $dangerColor;
+        color: $dangerColor !important;
+        &:hover {
+            background-color: $dangerHoverColor;
+        }
+    }
+
+    &--success {
+        border: 1px solid $successColor;
+        color: $successColor !important;
+        &:hover {
+            background-color: $successHoverColor;
+        }
+    }
+    &:active {
+        transform: translateY(3px);
+    }
+}
