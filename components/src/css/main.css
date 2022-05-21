@@ -1,4 +1,8 @@
 @media (min-width: 320px) and (max-width: 767px) {
+  .items {
+    margin: auto 0.7rem !important;
+  }
+
   .example {
     flex-direction: column;
   }
@@ -16,6 +20,10 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .items {
+    margin: auto 1.2rem !important;
+  }
+
   .example {
     flex-direction: column;
   }
@@ -193,6 +201,12 @@
   padding: 12px 14px;
   transition: all 0.5s;
   font-size: 16px;
+}
+.s-input option {
+  transition: all 0.5s;
+}
+.s-input option:hover {
+  font-size: 12px;
 }
 .s-input:enabled {
   background-color: #fff;

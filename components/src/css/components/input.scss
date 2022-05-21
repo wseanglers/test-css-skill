@@ -17,6 +17,12 @@
     padding: 12px 14px;
     transition: $defaultTransitionTime;
     font-size: 16px;
+    & option {
+        transition: $defaultTransitionTime;
+        &:hover {
+            font-size: 12px;
+        }
+    }
     &:enabled {
         background-color: #fff;
         color: #000;
