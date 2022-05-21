@@ -1,0 +1,206 @@
+$bgColor: #FFEED9;
+$linkColor: #594F43;
+$textColor: #403930;
+
+$sectionBGColor: #FFDDBF80;
+
+$btnBGColor: #4E5E80;
+$btnOulinedColor: #4D5566;
+
+$msgColor: #FFDDBF;
+
+$defaultTransition: all 0.5s;
+
+@keyframes rotateEmoji {
+    0% {
+        transform: rotate(-40deg);
+    }
+    50% {
+        transform: rotate(40deg);
+    }
+    100% {
+        transform: rotate(-40deg);
+    }
+}
+
+body {
+    background-color: $bgColor;
+    margin: 0;
+    font-family: 'Eczar', serif;
+    font-family: 'Work Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin: 0 5%;
+}
+.navbar-menu {
+    padding: 1rem;
+    & a {
+        text-decoration: none;
+        color: $linkColor;
+        margin: 0 5px;
+        font-weight: 500;
+        font-size: 20px;
+        transition: $defaultTransition;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            width: 0%;
+            background-color: $textColor;
+            height: 3px;
+            bottom: -2px;
+            left: 0;
+            transition: $defaultTransition;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+.hello-msg {
+    font-size: 24px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background-color: $msgColor;
+    color: $textColor;
+    font-weight: 500;
+    display: block;
+    width: fit-content;
+}
+.banner-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 600px;
+    }
+    &--button-list {
+        display: flex;
+
+        & a {
+            display: inline;
+            text-decoration: none;
+            border-radius: 16px;
+            padding: 24px 40px;
+            margin-right: 10px;
+            transition: $defaultTransition;
+            &:hover {
+                transform: translateY(-6px);
+            }
+        }
+        &__btn {
+            color: white;
+            background-color: $btnBGColor;
+        }
+        &__btn-outlined {
+            color: $btnOulinedColor;
+            border: 4px solid $btnOulinedColor;
+            box-sizing: border-box;
+            transition: $defaultTransition;
+            padding: 20px 40px !important;
+            &:hover {
+                
+                color: white;
+                background-color: $btnOulinedColor;
+                
+            }
+        }
+
+    }
+}
+.about-msg {
+    color: $textColor;
+    font-family: 'Eczar';
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.section {
+    margin-top: -1.5rem;
+    padding-bottom: 1.5rem;
+}
+.work {
+
+    background-color: $sectionBGColor;
+    & h2 {
+        font-family: 'Eczar';
+        padding-top: 4rem;
+        padding-bottom: 1.6rem;
+        color: $textColor;
+        font-weight: 500px;
+        font-size: 37;
+    }
+}
+.show-card {
+    & > div {
+        margin-bottom: 1.5rem;
+    }
+}
+.card {
+    background-color: white;
+    border-radius: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    &--content {
+        padding: 5rem;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 26px;
+        color: $textColor
+    }
+    &__text {
+        font-size: 20px;
+        color: $textColor
+    }
+    &__link {
+        text-decoration: none;
+        color: $btnBGColor;
+        font-weight: 600;
+        font-size: 20px;
+        position: relative;
+        &::after {
+            content: " ";
+            position: absolute;
+            width: 0%;
+            background-color: $btnBGColor;
+            height: 3px;
+            bottom: -4px;
+            left: 0;
+            transition: $defaultTransition;
+        }
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+    &--img {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            object-fit: cover;
+            transition: $defaultTransition;
+            float: right;
+            transform: scale(1.5);
+        }
+    }
+    &:hover {
+        .card--img {
+            img {
+                transform: scale(1);
+            }
+        }
+    }
+}
